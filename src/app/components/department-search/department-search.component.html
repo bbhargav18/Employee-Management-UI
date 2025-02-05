@@ -1,0 +1,8 @@
+<div class="container mt-4">
+    <h2>Search Employees by Department</h2>
+    <input type="text" [(ngModel)]="departmentId" class="form-control" placeholder="Enter Department ID">
+    <button class="btn btn-primary mt-2" (click)="searchEmployees()">Search</button>
+  
+    <app-employee-table [employees]="employees"></app-employee-table>
+  </div>
+  
