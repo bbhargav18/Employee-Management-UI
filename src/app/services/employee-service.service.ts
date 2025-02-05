@@ -7,7 +7,7 @@ import { Employee } from '../models/employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private apiUrl = 'http://localhost:8012'; // Adjust as needed
+  private apiUrl = 'http://localhost:8012';
   private http = inject(HttpClient);
 
   getEmployeesByDepartment(deptId: string): Observable<any[]> {

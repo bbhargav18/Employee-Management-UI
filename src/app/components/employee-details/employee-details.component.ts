@@ -6,7 +6,7 @@ import { EmployeeService } from '../../services/employee-service.service';
 @Component({
   selector: 'app-employee-details',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './employee-details.component.html',
   styleUrl: './employee-details.component.scss'
 })
