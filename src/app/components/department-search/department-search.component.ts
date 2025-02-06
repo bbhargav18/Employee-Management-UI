@@ -20,6 +20,11 @@ export class DepartmentSearchComponent {
     if (this.departmentId.trim()) {
       this.employeeService.getEmployeesByDepartment(this.departmentId).subscribe(data => {
         this.employees = data;
+        if(data.length == 0) {
+          alert('No data found');
+        }
+      }, error => {
+        console.error('Error fetching employees:', error);
       });
     }
   }
