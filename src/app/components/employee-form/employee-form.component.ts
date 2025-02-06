@@ -49,6 +49,9 @@ export class EmployeeFormComponent implements OnInit {
       this.employeeService.addUpdateEmployee(employeeData).subscribe(() => {
         alert('Employee updated successfully!');
         this.router.navigate(['']); 
+      }, error => {
+        console.error('Error updating employee:', error);
+        alert('Failed to update employee');
       });
     }
   }

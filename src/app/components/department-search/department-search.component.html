@@ -3,6 +3,6 @@
     <input type="text" [(ngModel)]="departmentId" class="form-control" placeholder="Enter Department ID">
     <button class="btn btn-primary mt-2" (click)="searchEmployees()">Search</button>
   
-    <app-employee-table [employees]="employees"></app-employee-table>
+    <app-employee-table [employees]="employees" (employeeDeleted)="handleEmployeeDeleted()"></app-employee-table>
   </div>
   

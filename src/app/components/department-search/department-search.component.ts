@@ -23,4 +23,8 @@ export class DepartmentSearchComponent {
       });
     }
   }
+
+  handleEmployeeDeleted() {
+    this.searchEmployees();
+  }
 }
