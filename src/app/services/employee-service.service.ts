@@ -11,18 +11,18 @@ export class EmployeeService {
   private http = inject(HttpClient);
 
   getEmployeesByDepartment(deptId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/employees/department/${deptId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/employee/department/${deptId}`);
   }
 
   getEmployeeById(empId: string): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/employees/${empId}`);
+    return this.http.get<any>(`${this.apiUrl}/employee/${empId}`);
   }
 
   addUpdateEmployee(employee: Employee): Observable<any> {
-    return this.http.post<Employee>(`${this.apiUrl}/employees`, employee);
+    return this.http.post<Employee>(`${this.apiUrl}/employee`, employee);
   }
 
   deleteEmployee(empId: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/employees/${empId}`);
+    return this.http.delete(`${this.apiUrl}/employee/${empId}`);
   }
 }
